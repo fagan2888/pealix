@@ -82,7 +82,7 @@ def mapplot(map, rng=None, title=None, cbar=None, aitoff=None, mask=None, \
 
     if not noerase:
         plt.figure(figsize=figsize)
-    plt.imshow(pmap, cmap=cmap, interpolation='none')
+    plt.imshow(pmap, cmap=cmap, interpolation='nearest')
     plt.clim(rng)
     plt.axis('off')
     if title: plt.title(title,fontsize=tsize)
